@@ -18,7 +18,29 @@ return {
     "nvim-treesitter/nvim-treesitter-textobjects",
   },
   opts = {
-    ensure_installed = {"angular","bash","c","cpp","css","dockerfile","go","html","java","javascript","json","jsdoc","lua","luadoc","php","pug", "python", "typescript","vim"},
+    ensure_installed = {
+      "angular",
+      "blade",
+      "bash",
+      "c",
+      "cpp",
+      "css",
+      "dockerfile",
+      "go",
+      "html",
+      "java",
+      "javascript",
+      "json",
+      "jsonc",
+      "jsdoc",
+      "lua",
+      "luadoc",
+      "php",
+      "pug",
+      "python",
+      "typescript",
+      "vim",
+    },
     auto_install = true,
     highlight = {
       enable = true,
@@ -34,10 +56,8 @@ return {
     parser_config.blade = {
       install_info = {
         url = "https://github.com/EmranMR/tree-sitter-blade",
-        files = {
-          "src/parser.c",
-          -- 'src/scanner.cc',
-        },
+        files = { "src/parser.c" },
+        branch = "main",
         generate_requires_npm = true,
         requires_generate_from_grammar = true,
       },
